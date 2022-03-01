@@ -43,8 +43,8 @@ class Client extends Service
 
             $url = current($location) ;
 
-            return $this->getByName([
-                'role' => substr( $url , strrpos( $url , '/') + 1 )
+            return $this->get([
+                'id' => substr( $url , strrpos( $url , '/') + 1 )
             ]);
         }
 
